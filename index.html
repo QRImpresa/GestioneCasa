@@ -203,25 +203,52 @@
       font-style: italic;
     }
 
-    /* SERVIZI EXTRA */
+    /* SERVIZI EXTRA A TENDINA */
 
-    .extras {
+    details.extra {
       margin-top: 25px;
-      padding: 18px 20px 10px;
-      background: #ffffff;
       border-radius: 3px;
-      border-left: 6px solid var(--blue);
+      background: #ffffff;
       box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+      border-left: 6px solid var(--blue);
+      overflow: hidden;
     }
 
-    .extras h3 {
-      margin: 0 0 8px;
-      text-transform: uppercase;
+    details.extra summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 14px;
+      background: #ffffff;
       color: var(--blue);
-      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    .extras ul li::before {
+    details.extra summary::-webkit-details-marker {
+      display: none;
+    }
+
+    details.extra summary::after {
+      content: "+";
+      margin-left: 10px;
+      font-size: 1.1rem;
+      color: var(--blue);
+    }
+
+    details.extra[open] summary::after {
+      content: "−";
+    }
+
+    .extras-body {
+      padding: 10px 16px 8px;
+      background: #fffdf6;
+      border-top: 1px solid #f0e4c4;
+    }
+
+    .extras-body ul li::before {
       content: "•";
       color: var(--green);
       font-weight: bold;
@@ -244,11 +271,11 @@
       margin-bottom: 10px;
     }
 
-    /* CONTATTI */
+    /* CONTATTI + CTA */
 
     .contacts {
       margin-top: 20px;
-      padding: 18px 20px 10px;
+      padding: 18px 20px 16px;
       background: #ffffff;
       border-radius: 3px;
       border-left: 6px solid var(--blue);
@@ -256,11 +283,42 @@
     }
 
     .contacts p {
-      margin: 4px 0;
+      margin: 4px 0 10px;
     }
 
     .contacts strong {
       color: var(--blue);
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    .btn-cta {
+      display: inline-block;
+      padding: 8px 14px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      text-decoration: none;
+      color: #ffffff;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+    }
+
+    .btn-call {
+      background: var(--blue);
+    }
+
+    .btn-cta:hover {
+      opacity: 0.9;
     }
 
     footer {
@@ -321,7 +379,6 @@
           </ul>
           <div class="pack-prices">
             <strong>Prezzo:</strong> 25 € / mese oppure 270 € / anno (pagamento anticipato).
-  
           </div>
         </div>
       </details>
@@ -350,7 +407,6 @@
           </ul>
           <div class="pack-prices">
             <strong>Prezzo:</strong> 45 € / mese oppure 480 € / anno.
-        
           </div>
         </div>
       </details>
@@ -387,16 +443,21 @@
 
     </div>
 
-    <div class="extras">
-      <h3>Servizi extra (prezzi locali)</h3>
-      <ul>
-        <li>Pulizia extra: 40–70 €</li>
-        <li>Presenza su chiamata: 15 € / ora</li>
-        <li>Intervento urgente: 20–30 €</li>
-        <li>Consegna / ritiro chiavi: 10–15 €</li>
-        <li>Preparazione frigo base: 15–25 €</li>
-      </ul>
-    </div>
+    <!-- SERVIZI EXTRA A TENDINA -->
+    <details class="extra">
+      <summary>
+        <span>Servizi extra (prezzi locali)</span>
+      </summary>
+      <div class="extras-body">
+        <ul>
+          <li>Pulizia extra: 40–70 €</li>
+          <li>Presenza su chiamata: 15 € / ora</li>
+          <li>Intervento urgente: 20–30 €</li>
+          <li>Consegna / ritiro chiavi: 10–15 €</li>
+          <li>Preparazione frigo base: 15–25 €</li>
+        </ul>
+      </div>
+    </details>
 
     <div class="highlight">
       <div class="highlight-title">Perché scegliere questo servizio</div>
@@ -411,7 +472,19 @@
     <div class="contacts">
       <p><strong>Contatti</strong></p>
       <p>Per informazioni sui pacchetti e sulle modalità operative, contattaci senza impegno.</p>
-      
+      <div class="cta-buttons">
+        <!-- Italia: prefisso 39 + numero 3934425337 senza segni -->
+        <a class="btn-cta btn-whatsapp"
+           href="https://wa.me/393934425337?text=Ciao%2C%20vorrei%20informazioni%20sui%20servizi%20di%20gestione%20seconde%20case."
+           target="_blank" rel="noopener">
+          Scrivi su WhatsApp
+        </a>
+        <a class="btn-cta btn-call"
+           href="tel:+393934425337">
+          Chiama ora
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
