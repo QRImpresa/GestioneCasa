@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servizi di Gestione Seconde Case – Manduria e Limitrofi</title>
+  <title>Servizi di Gestione Seconde Case – Manduria</title>
   <meta name="description" content="Servizi di gestione e controllo seconde case a Manduria. Presenza locale affidabile tutto l’anno.">
 
   <style>
     :root {
-      --blue: #004990;      /* blu intenso come il titolo del volantino */
-      --yellow: #f6c400;    /* giallo del sottotitolo */
-      --green: #1c8c3a;     /* verde delle spunte/pulsanti */
-      --sand: #f2e3c6;      /* beige di sfondo */
-      --paper: #fff8e8;     /* carta chiara centrale */
+      --blue: #004990;
+      --yellow: #f6c400;
+      --green: #1c8c3a;
+      --sand: #f2e3c6;
+      --paper: #fff8e8;
       --dark: #333333;
     }
 
@@ -65,7 +65,7 @@
       background: var(--paper);
       border-radius: 3px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-      padding: 25px 25px 10px;
+      padding: 25px 25px 20px;
       border-top: 6px solid var(--yellow);
     }
 
@@ -86,12 +86,6 @@
 
     .intro p {
       margin: 6px 0;
-    }
-
-    .columns {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 22px;
     }
 
     ul {
@@ -115,45 +109,125 @@
       font-weight: bold;
     }
 
-    .packages {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 18px;
+    /* ACCORDION PACCHETTI */
+
+    .packs-wrapper {
       margin-top: 10px;
     }
 
-    .package {
-      background: #ffffff;
-      border: 1px solid #e0d4b3;
+    details.pack {
+      margin-top: 10px;
       border-radius: 3px;
+      background: #ffffff;
       box-shadow: 0 2px 5px rgba(0,0,0,0.08);
       overflow: hidden;
     }
 
-    .package h3 {
-      margin: 0;
-      background: var(--green);
-      color: #ffffff;
-      text-align: center;
-      padding: 10px 8px;
-      font-size: 1rem;
-      letter-spacing: 0.5px;
+    details.pack + details.pack {
+      margin-top: 8px;
     }
 
-    .package h3:nth-child(1).stagionale {
+    details.pack summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 10px 14px;
       background: var(--blue);
+      color: #ffffff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      text-transform: uppercase;
     }
 
-    .package h3:nth-child(1).completa {
+    details.pack[open] summary {
       background: var(--yellow);
       color: #003366;
-      font-weight: 700;
     }
 
-    .package-body {
-      padding: 12px 16px 5px;
-      background: #fffdf6;
+    details.pack summary::-webkit-details-marker {
+      display: none;
     }
+
+    details.pack summary::after {
+      content: "+";
+      margin-left: 10px;
+      font-size: 1.1rem;
+    }
+
+    details.pack[open] summary::after {
+      content: "−";
+    }
+
+    .summary-left {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .pack-name {
+      font-size: 0.95rem;
+    }
+
+    .pack-target {
+      font-size: 0.8rem;
+      text-transform: none;
+      opacity: 0.9;
+    }
+
+    .price {
+      font-size: 0.95rem;
+      text-align: right;
+    }
+
+    .pack-body {
+      padding: 12px 16px 10px;
+      background: #fffdf6;
+      border-top: 1px solid #f0e4c4;
+    }
+
+    .pack-body h4 {
+      margin: 0 0 6px;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      color: var(--blue);
+    }
+
+    .pack-prices {
+      margin-top: 6px;
+      font-size: 0.9rem;
+    }
+
+    .pack-note {
+      margin-top: 4px;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    /* SERVIZI EXTRA */
+
+    .extras {
+      margin-top: 25px;
+      padding: 18px 20px 10px;
+      background: #ffffff;
+      border-radius: 3px;
+      border-left: 6px solid var(--blue);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    }
+
+    .extras h3 {
+      margin: 0 0 8px;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-size: 1rem;
+    }
+
+    .extras ul li::before {
+      content: "•";
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    /* PERCHÉ SCEGLIERCI */
 
     .highlight {
       margin-top: 25px;
@@ -170,8 +244,10 @@
       margin-bottom: 10px;
     }
 
+    /* CONTATTI */
+
     .contacts {
-      margin-top: 25px;
+      margin-top: 20px;
       padding: 18px 20px 10px;
       background: #ffffff;
       border-radius: 3px;
@@ -210,77 +286,123 @@
     <div class="intro">
       <span class="section-title">Il servizio</span>
       <p>
-        Il servizio di gestione seconde case è pensato per i proprietari che non risiedono stabilmente a Manduria o dintorni e desiderano una presenza di fiducia sul territorio.
+        Il servizio di gestione seconde case è pensato per i proprietari che non risiedono stabilmente a Manduria e desiderano una presenza di fiducia sul territorio.
       </p>
       <p>
         Ci occupiamo del controllo, della cura e della preparazione dell’abitazione affinché sia sempre seguita e pronta quando ne hai bisogno.
       </p>
     </div>
 
-    <div class="columns">
-      <div>
-        <span class="section-title">Cosa facciamo</span>
-        <ul>
-          <li>Controllo periodico dell’abitazione</li>
-          <li>Verifica generale di sicurezza e condizioni</li>
-          <li>Apertura e chiusura stagionale</li>
-          <li>Pulizia pre-arrivo</li>
-          <li>Presenza per tecnici, consegne ed emergenze</li>
-          <li>Assistenza locale su chiamata</li>
-        </ul>
-        <p>Servizio studiato per chi non può essere presente di persona.</p>
-      </div>
+    <span class="section-title">Pacchetti disponibili</span>
 
-      <div>
-        <span class="section-title">Pacchetti disponibili</span>
-        <div class="packages">
-          <div class="package">
-            <h3>Controllo Base</h3>
-            <div class="package-body">
-              <ul>
-                <li>Controllo periodico dell’immobile</li>
-                <li>Ariazione dei locali</li>
-                <li>Verifica condizioni generali</li>
-                <li>Segnalazione tempestiva anomalie</li>
-                <li>Report riepilogativo</li>
-              </ul>
-              <p>Per case chiuse o utilizzate raramente.</p>
-            </div>
+    <div class="packs-wrapper">
+
+      <!-- PACCHETTO 1 -->
+      <details class="pack">
+        <summary>
+          <div class="summary-left">
+            <span class="pack-name">Pacchetto 1 – Controllo Base</span>
+            <span class="pack-target">Target: case chiuse per lunghi periodi, uso saltuario</span>
           </div>
-
-          <div class="package">
-            <h3 class="stagionale">Gestione Stagionale</h3>
-            <div class="package-body">
-              <ul>
-                <li>Controlli programmati</li>
-                <li>Apertura stagionale</li>
-                <li>Chiusura e messa in sicurezza</li>
-                <li>Pulizia pre-arrivo</li>
-                <li>Presenza per tecnici o consegne</li>
-                <li>Report fotografico</li>
-              </ul>
-              <p>Per chi utilizza la casa in alcuni periodi dell’anno.</p>
-            </div>
+          <div class="price">
+            <div>25 € / mese</div>
+            <div>270 € / anno</div>
           </div>
-
-          <div class="package">
-            <h3 class="completa">Gestione Completa</h3>
-            <div class="package-body">
-              <ul>
-                <li>Controlli frequenti</li>
-                <li>Apertura e chiusura stagionale</li>
-                <li>Pulizie pre-arrivo</li>
-                <li>Ritiro posta</li>
-                <li>Presenza per artigiani</li>
-                <li>Preparazione casa all’arrivo</li>
-                <li>Assistenza su chiamata</li>
-                <li>Report dettagliato</li>
-              </ul>
-              <p>Per chi desidera delegare tutto con serenità.</p>
-            </div>
+        </summary>
+        <div class="pack-body">
+          <h4>Servizi inclusi</h4>
+          <ul>
+            <li>1 controllo mensile</li>
+            <li>Ariazione locali</li>
+            <li>Controllo visivo infiltrazioni e umidità</li>
+            <li>Controllo finestre, porte, serrature</li>
+            <li>Report WhatsApp con 3–4 foto</li>
+            <li>Avviso immediato in caso di problemi</li>
+          </ul>
+          <div class="pack-prices">
+            <strong>Prezzo Manduria:</strong> 25 € / mese oppure 270 € / anno (pagamento anticipato).
+          </div>
+          <div class="pack-note">
+            ➡️ Prezzo allineato al mercato locale, facile da accettare.
           </div>
         </div>
-      </div>
+      </details>
+
+      <!-- PACCHETTO 2 -->
+      <details class="pack">
+        <summary>
+          <div class="summary-left">
+            <span class="pack-name">Pacchetto 2 – Stagionale Salento</span>
+            <span class="pack-target">Target: proprietari che usano la casa in estate e saltuariamente in inverno</span>
+          </div>
+          <div class="price">
+            <div>45 € / mese</div>
+            <div>480 € / anno</div>
+          </div>
+        </summary>
+        <div class="pack-body">
+          <h4>Servizi inclusi</h4>
+          <ul>
+            <li>1 controllo mensile</li>
+            <li>Apertura stagionale: aerazione completa, attivazione utenze, pulizia base</li>
+            <li>Chiusura stagionale: spegnimento utenze e controllo sicurezza</li>
+            <li>1 pulizia pre-arrivo inclusa</li>
+            <li>Presenza per tecnici o consegne (1 intervento/anno)</li>
+            <li>Report fotografico dopo ogni intervento</li>
+          </ul>
+          <div class="pack-prices">
+            <strong>Prezzo Manduria:</strong> 45 € / mese oppure 480 € / anno.
+          </div>
+          <div class="pack-note">
+            ➡️ Pacchetto ideale per Manduria: prezzo psicologico sotto i 500 €.
+          </div>
+        </div>
+      </details>
+
+      <!-- PACCHETTO 3 -->
+      <details class="pack">
+        <summary>
+          <div class="summary-left">
+            <span class="pack-name">Pacchetto 3 – Premium Tranquillità</span>
+            <span class="pack-target">Target: proprietari fuori regione o estero</span>
+          </div>
+          <div class="price">
+            <div>75 € / mese</div>
+            <div>820 € / anno</div>
+          </div>
+        </summary>
+        <div class="pack-body">
+          <h4>Servizi inclusi</h4>
+          <ul>
+            <li>2 controlli mensili</li>
+            <li>Apertura e chiusura stagionale</li>
+            <li>Pulizie pre-arrivo illimitate (uso personale)</li>
+            <li>Ritiro posta</li>
+            <li>Presenza per artigiani e tecnici</li>
+            <li>Preparazione casa (letti pronti, controllo cucina)</li>
+            <li>Presenza su chiamata fino a 4 ore/anno</li>
+            <li>Report dettagliato con foto</li>
+          </ul>
+          <div class="pack-prices">
+            <strong>Prezzo Manduria:</strong> 75 € / mese oppure 820 € / anno.
+          </div>
+          <div class="pack-note">
+            ➡️ Prezzo competitivo per il Sud, con alto valore percepito.
+          </div>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="extras">
+      <h3>Servizi extra (prezzi locali)</h3>
+      <ul>
+        <li>Pulizia extra: 40–70 €</li>
+        <li>Presenza su chiamata: 15 € / ora</li>
+        <li>Intervento urgente: 20–30 €</li>
+        <li>Consegna / ritiro chiavi: 10–15 €</li>
+        <li>Preparazione frigo base: 15–25 €</li>
+      </ul>
     </div>
 
     <div class="highlight">
@@ -296,6 +418,7 @@
     <div class="contacts">
       <p><strong>Contatti</strong></p>
       <p>Per informazioni sui pacchetti e sulle modalità operative, contattaci senza impegno.</p>
+      <p>👉 Scansiona il QR code sul volantino oppure utilizza il contatto indicato.</p>
     </div>
   </div>
 </div>
@@ -306,7 +429,3 @@
 
 </body>
 </html>
-```
-
-Fonti
-[1] image.jpeg https://ppl-ai-file-upload.s3.amazonaws.com/web/direct-files/attachments/images/118581267/d40c9ef2-4434-49e8-87ce-7b803cf5b4b3/image.jpeg?AWSAccessKeyId=ASIA2F3EMEYE5F77ND5W&Signature=zM1twlLCN0Q1279ERIGzJjauOe8%3D&x-amz-security-token=IQoJb3JpZ2luX2VjELf%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJHMEUCIBqk5yJivwhgiYbIEi6s9MFxPF6qwz2Oi%2FJvKiDf5kB4AiEA0PnSejAvB4mZ6yopgdYCyAllIxc7rEyTeyNoffJNSI4q%2FAQIgP%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARABGgw2OTk3NTMzMDk3MDUiDC40XEeKGtoZTFk%2BMyrQBB0lYKxJ01SdrKBZMHqYL2WNwB5ZC7qThUvV16P2kZAqjXQB8KBYaqkuqtSK1qzYzE5ghi1QTJjay8kUnvaEGkFMbA193d8Re5TlkfBc62lIPk2%2FrQf32XNl4XokQ2z4JPi0IaIh5P4%2FOlmj%2FAEu13KlFAnQ%2FACWHlTfiCv4gX1MXNP0n7YtlfqTBzNdsJ55GRYWawqMpC%2F6lLSaBLDmRjEGI1omcTny0GNyuBmeeocE7qVAMwxdczPvSobSVLoe2e3ra%2FWxDQlGNji7Oip93Jp0v90zw2VIhRiOSiAWxl0z%2B8E9XhHhF8Q0jViHPKYxGmqNwLbUt61bdfm3S0N%2Bq2vi1c%2BuPy1hhpXHj%2BzqdSvSFbODwOn%2FQ5SNTSXIJIshd%2BdDy2u7RgCjzn2Qe7Te0MifQmvyQvLm2sIo8r7HWcpgAs3m1IbH%2B5vkuJTjbyhTdAhi2PoErhluyfY1tJAoD2EiZGRYVIvAGfCwtUUpxGY3bqizMfBgeDACHDhsoWZBNSUQcW8GmRb5iJxEDh7frwfbtQCm%2FnjIVh3p5%2BkZ2CT7Nw3vIA5jNIeWXqm1eoweiBNFMe2KAu%2FyFDQ9pevEYtfRFsMgxOQegS2XSu1oVBUQFDz%2FxXJEqW3bghVkJ6s2KIDnLBLJtIAOjedPMBXgZa%2FFz50HfGS7SlewJUR827IyqY8Ap7jj17p2U2FhrksJu85%2B7KDroHA8a2VuS7Zwj5%2B2Ba8xB%2FvGiPbhA5h%2FeMDvYQpvszPw2VcfAU0FePgboCqS8Z5Es2HzK23c33KAHxMwpYeLygY6mAFX5FiFBLn73Y6pez2XjPO68uQBUBhOu2c%2FBBZGTCbvXTlImNAv%2BTSQRE22tEfAhG7LAZLr1BUaNE5ATFoqxjh10%2BvPdiBtJuZLab%2BsKLz4EVlbF%2Fu%2F6HecjlrW2GqmDvwd9zUVMaLVMX79aAEFiMsmrRT4v1XEi1EbEbxTSRLiXdLk0iSUyWPkAr0F0EDuu7OoeuxgwEE6ng%3D%3D&Expires=1765984922
