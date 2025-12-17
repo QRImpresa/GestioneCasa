@@ -3,161 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gestione Seconde Case | Manduria</title>
-  <meta name="description" content="Servizi di gestione e controllo seconde case a Manduria. Presenza locale affidabile per la tua casa tutto l'anno.">
+  <title>Gestione Seconde Case – Manduria</title>
+  <meta name="description" content="Servizi di gestione e controllo seconde case a Manduria. Presenza locale affidabile tutto l’anno.">
+
   <style>
+    :root {
+      --blue: #1f4e79;
+      --gold: #d6b46a;
+      --paper: #f7f3ea;
+      --dark: #2b2b2b;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
+      font-family: "Arial", sans-serif;
+      background: var(--paper);
+      color: var(--dark);
       line-height: 1.6;
     }
+
     header {
-      background: #1f4e79;
+      background: linear-gradient(135deg, #1f4e79, #163a5a);
       color: #fff;
-      padding: 40px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
-    section {
-      padding: 40px 20px;
-      max-width: 1000px;
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      max-width: 1100px;
       margin: auto;
+      padding: 30px 20px;
+    }
+
+    .box {
       background: #fff;
-      margin-bottom: 20px;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-left: 6px solid var(--blue);
     }
-    h1, h2, h3 {
+
+    .box h2 {
       margin-top: 0;
-      color: #1f4e79;
+      color: var(--blue);
+      text-transform: uppercase;
+      font-size: 1.4rem;
     }
+
     ul {
       padding-left: 20px;
     }
+
     .packages {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 25px;
     }
+
     .package {
+      background: #ffffff;
       border: 1px solid #ddd;
-      padding: 20px;
-      background: #fafafa;
+      padding: 25px;
     }
+
+    .package h3 {
+      background: var(--blue);
+      color: #fff;
+      padding: 12px;
+      margin: -25px -25px 20px -25px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
     .highlight {
-      background: #eef4f9;
-      border-left: 5px solid #1f4e79;
-      padding: 20px;
+      background: #eef3f8;
+      border-left: 6px solid var(--gold);
     }
+
     footer {
-      background: #1f4e79;
+      background: var(--blue);
       color: #fff;
       text-align: center;
-      padding: 20px;
+      padding: 25px 20px;
+    }
+
+    footer p {
+      margin: 0;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Servizi di Gestione Seconde Case</h1>
+  <h1>SERVIZI DI GESTIONE SECONDE CASE</h1>
   <p>Manduria e zone limitrofe</p>
-  <p>Presenza locale affidabile per la tua casa, tutto l’anno</p>
+  <p>Presenza affidabile sul territorio per la tua tranquillità</p>
 </header>
 
-<section>
-  <h2>Il servizio</h2>
-  <p>
-    Il servizio di gestione seconde case è pensato per i proprietari che non
-    vivono stabilmente a Manduria e desiderano una presenza affidabile sul territorio.
-  </p>
-  <p>
-    Ci occupiamo del controllo periodico dell’immobile, della sua preparazione
-    prima dell’arrivo e della gestione delle principali esigenze quando la casa
-    è disabitata.
-  </p>
-</section>
+<div class="container">
 
-<section>
-  <h2>Cosa facciamo</h2>
-  <ul>
-    <li>Controllo periodico dell’abitazione</li>
-    <li>Verifica generale di sicurezza e condizioni</li>
-    <li>Apertura e chiusura stagionale</li>
-    <li>Pulizia pre-arrivo</li>
-    <li>Presenza per tecnici, consegne ed emergenze</li>
-    <li>Assistenza locale su chiamata</li>
-  </ul>
-</section>
-
-<section>
-  <h2>Pacchetti disponibili</h2>
-
-  <div class="packages">
-
-    <div class="package">
-      <h3>Controllo Base</h3>
-      <p>Ideale per case chiuse o utilizzate raramente.</p>
-      <ul>
-        <li>Controllo periodico dell’immobile</li>
-        <li>Ariazione dei locali</li>
-        <li>Verifica visiva di porte, finestre e condizioni generali</li>
-        <li>Segnalazione tempestiva di eventuali problemi</li>
-        <li>Report riepilogativo dopo ogni controllo</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Gestione Stagionale</h3>
-      <p>Pensato per chi utilizza la casa in alcuni periodi dell’anno.</p>
-      <ul>
-        <li>Controlli periodici programmati</li>
-        <li>Apertura stagionale dell’abitazione</li>
-        <li>Chiusura stagionale e messa in sicurezza</li>
-        <li>Pulizia pre-arrivo</li>
-        <li>Presenza per tecnici o consegne concordate</li>
-        <li>Report fotografico degli interventi</li>
-      </ul>
-    </div>
-
-    <div class="package">
-      <h3>Gestione Completa</h3>
-      <p>Per chi desidera delegare completamente la gestione della casa.</p>
-      <ul>
-        <li>Controlli frequenti dell’immobile</li>
-        <li>Apertura e chiusura stagionale</li>
-        <li>Pulizie pre-arrivo incluse</li>
-        <li>Ritiro posta</li>
-        <li>Presenza per artigiani e interventi tecnici</li>
-        <li>Preparazione della casa prima dell’arrivo</li>
-        <li>Assistenza su chiamata</li>
-        <li>Report dettagliati e documentazione fotografica</li>
-      </ul>
-    </div>
-
+  <div class="box">
+    <h2>Il servizio</h2>
+    <p>
+      Il servizio di gestione seconde case è rivolto ai proprietari che non risiedono
+      stabilmente a Manduria e desiderano una presenza affidabile sul territorio.
+    </p>
+    <p>
+      Ci occupiamo del controllo, della cura e della preparazione dell’abitazione
+      affinché sia sempre seguita e pronta all’uso.
+    </p>
   </div>
-</section>
 
-<section class="highlight">
-  <h2>Perché scegliere questo servizio</h2>
-  <ul>
-    <li>Presenza reale sul territorio</li>
-    <li>Affidabilità e continuità</li>
-    <li>Comunicazione chiara e diretta</li>
-    <li>Attenzione concreta alla tua casa</li>
-  </ul>
-</section>
+  <div class="box">
+    <h2>Cosa facciamo</h2>
+    <ul>
+      <li>Controllo periodico dell’abitazione</li>
+      <li>Verifica generale di sicurezza e condizioni</li>
+      <li>Apertura e chiusura stagionale</li>
+      <li>Pulizia pre-arrivo</li>
+      <li>Presenza per tecnici, consegne ed emergenze</li>
+      <li>Assistenza locale su chiamata</li>
+    </ul>
+  </div>
 
-<section>
-  <h2>Contatti</h2>
-  <p>
-    Per ricevere informazioni dettagliate sui pacchetti, disponibilità e modalità operative,
-    contattaci senza impegno.
-  </p>
-  <p>
-    👉 Scansiona il QR code dal volantino<br>
-    👉 Oppure utilizza il contatto indicato
-  </p>
-</section>
+  <div class="box">
+    <h2>Pacchetti disponibili</h2>
+
+    <div class="packages">
+
+      <div class="package">
+        <h3>CONTROLLO BASE</h3>
+        <ul>
+          <li>Controllo periodico dell’immobile</li>
+          <li>Ariazione dei locali</li>
+          <li>Verifica condizioni generali</li>
+          <li>Segnalazione tempestiva anomalie</li>
+          <li>Report riepilogativo</li>
+        </ul>
+      </div>
+
+      <div class="package">
+        <h3>GESTIONE STAGIONALE</h3>
+        <ul>
+          <li>Controlli programmati</li>
+          <li>Apertura stagionale</li>
+          <li>Chiusura e messa in sicurezza</li>
+          <li>Pulizia pre-arrivo</li>
+          <li>Presenza per tecnici o consegne</li>
+          <li>Report fotografico</li>
+        </ul>
+      </div>
+
+      <div class="package">
+        <h3>GESTIONE COMPLETA</h3>
+        <ul>
+          <li>Controlli frequenti</li>
+          <li>Apertura e chiusura stagionale</li>
+          <li>Pulizie pre-arrivo</li>
+          <li>Ritiro posta</li>
+          <li>Presenza per artigiani</li>
+          <li>Preparazione casa all’arrivo</li>
+          <li>Assistenza su chiamata</li>
+          <li>Report dettagliato</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="box highlight">
+    <h2>Perché scegliere questo servizio</h2>
+    <ul>
+      <li>Presenza locale reale</li>
+      <li>Affidabilità e continuità</li>
+      <li>Comunicazione chiara</li>
+      <li>Cura concreta dell’abitazione</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Contatti</h2>
+    <p>
+      Per informazioni sui pacchetti e sulle modalità operative,
+      contattaci senza impegno.
+    </p>
+    <p>
+      👉 Scansiona il QR code dal volantino<br>
+      👉 Oppure utilizza il contatto indicato
+    </p>
+  </div>
+
+</div>
 
 <footer>
   <p>Servizi di Gestione Seconde Case – Manduria</p>
