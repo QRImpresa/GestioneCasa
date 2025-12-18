@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Gestione Seconde Case – Manduria</title>
-<meta name="description" content="Gestione e controllo seconde case a Manduria e zone limitrofe. Presenza locale affidabile per proprietari non residenti.">
+<meta name="description" content="Gestione e controllo seconde case a Manduria e paesi limitrofi. Nessuna gestione affitti, nessuna sorveglianza armata. Pagamenti mensili, trimestrali o annuali con sconto.">
 
 <style>
 :root{
@@ -35,7 +35,12 @@ header{
 }
 header h1{text-transform:uppercase;font-size:2.3rem}
 header h2{color:var(--yellow);margin-top:6px;text-transform:uppercase}
-header p{max-width:720px;margin:12px auto 0}
+header p{max-width:780px;margin:12px auto 0}
+.hero-note{
+  margin-top:10px;
+  font-size:.9rem;
+  opacity:.9;
+}
 
 /* CTA */
 .hero-cta{
@@ -112,8 +117,15 @@ details[open] summary::after{content:"−"}
 .pack-left{display:flex;flex-direction:column}
 .pack-name{font-size:.95rem}
 .pack-target{font-size:.8rem;text-transform:none;opacity:.9}
-.price{text-align:right;font-size:.95rem;white-space:nowrap}
 
+.price-block{
+  text-align:right;
+  font-size:.85rem;
+  white-space:nowrap;
+  line-height:1.4;
+}
+
+/* corpo pacchetto */
 .pack-body{
   padding:14px 18px;
   background:#fffdf6;
@@ -126,9 +138,10 @@ details[open] summary::after{content:"−"}
   font-size:.95rem;
 }
 .pack-prices{
-  margin-top:6px;
+  margin-top:8px;
   font-size:.9rem;
 }
+.pack-prices strong{color:var(--blue-dark)}
 .pack-note{
   margin-top:4px;
   font-size:.85rem;
@@ -136,10 +149,10 @@ details[open] summary::after{content:"−"}
 }
 
 /* EXTRA */
-.extra{margin-top:28px;border-left:6px solid var(--blue)}
+.extra{margin-top:20px;border-left:6px solid var(--blue)}
 .extra summary{background:#fff;color:var(--blue)}
 .extra-body{padding:12px 18px;background:#fffdf6}
-.extra-body li::before{content:"•"}
+.extra-body li::before{content:"•";color:var(--blue);font-size:1.1rem}
 
 /* HIGHLIGHT */
 .highlight{
@@ -153,6 +166,15 @@ details[open] summary::after{content:"−"}
   text-transform:uppercase;
   color:var(--blue);
   margin-bottom:10px;
+}
+
+/* AVVISO AFFITTI / SORVEGLIANZA */
+.disclaimer{
+  margin-top:18px;
+  font-size:.9rem;
+  background:#fbe9e5;
+  border-left:6px solid #d8492f;
+  padding:12px 14px;
 }
 
 /* CONTATTI */
@@ -179,10 +201,14 @@ footer{
 
 <header>
   <h1>Gestione Seconde Case</h1>
-  <h2>Manduria e zone limitrofe</h2>
+  <h2>Manduria e paesi limitrofi</h2>
   <p>Presenza locale affidabile per chi vive lontano dalla propria casa.</p>
+  <p class="hero-note">
+    Ci occupiamo solo di controllo, cura e preparazione della casa:
+    <strong>nessuna gestione affitti, nessuna sorveglianza armata</strong>.
+  </p>
   <div class="hero-cta">
-    <a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">WhatsApp</a>
+    <a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">Scrivimi su WhatsApp</a>
     <a class="btn btn-call" href="tel:+393934425337">Chiama ora</a>
   </div>
 </header>
@@ -192,8 +218,19 @@ footer{
 
 <section class="section">
 <span class="section-title">Il servizio</span>
-<p>Servizio dedicato ai proprietari non residenti che desiderano una presenza di fiducia sul territorio.</p>
-<p>La casa viene controllata, seguita e preparata affinché sia sempre pronta e in sicurezza.</p>
+<p>Servizio pensato per proprietari non residenti che desiderano una presenza di fiducia sul territorio senza dover disturbare amici o vicini.</p>
+<p>La casa viene controllata periodicamente, seguita durante l’anno e preparata prima del tuo arrivo, così la trovi sempre in ordine.</p>
+</section>
+
+<section class="section">
+<span class="section-title">Come funzionano i pagamenti</span>
+<p>Per ogni pacchetto puoi scegliere il pagamento mensile, trimestrale o annuale anticipato.</p>
+<ul>
+  <li><strong>Mensile:</strong> massima flessibilità, puoi interrompere con breve preavviso.</li>
+  <li><strong>Trimestrale:</strong> risparmi circa il 5% rispetto al mensile.</li>
+  <li><strong>Annuale:</strong> risparmio fino a circa il 10% rispetto al mensile.</li>
+</ul>
+<p>Le cifre riportate sono di esempio e possono essere adattate in base alle esigenze della singola casa.</p>
 </section>
 
 <span class="section-title">Pacchetti disponibili</span>
@@ -205,7 +242,11 @@ footer{
     <span class="pack-name">Pacchetto 1 – Controllo Base</span>
     <span class="pack-target">Case chiuse per lunghi periodi</span>
   </div>
-  <div class="price">25 € / mese<br>270 € / anno</div>
+  <div class="price-block">
+    30 € / mese<br>
+    85 € / trimestre<br>
+    320 € / anno
+  </div>
 </summary>
 <div class="pack-body">
 <h4>Servizi inclusi</h4>
@@ -217,7 +258,12 @@ footer{
   <li>Report WhatsApp con foto</li>
   <li>Avviso immediato in caso di problemi</li>
 </ul>
-<div class="pack-prices"><strong>Pagamento:</strong> mensile o annuale anticipato</div>
+<div class="pack-prices">
+  <strong>Pagamenti disponibili:</strong> mensile, trimestrale o annuale anticipato con risparmio progressivo.
+</div>
+<div class="pack-note">
+  Ideale se la casa resta chiusa molti mesi e vuoi solo essere sicuro che sia tutto a posto.
+</div>
 </div>
 </details>
 
@@ -225,22 +271,31 @@ footer{
 <details>
 <summary>
   <div class="pack-left">
-    <span class="pack-name">Pacchetto 2 – Stagionale Salento</span>
+    <span class="pack-name">Pacchetto 2 – Gestione Stagionale Salento</span>
     <span class="pack-target">Uso estivo e saltuario</span>
   </div>
-  <div class="price">45 € / mese<br>480 € / anno</div>
+  <div class="price-block">
+    55 € / mese<br>
+    155 € / trimestre<br>
+    590 € / anno
+  </div>
 </summary>
 <div class="pack-body">
 <h4>Servizi inclusi</h4>
 <ul>
-  <li>1 controllo mensile</li>
-  <li>Apertura stagionale (utenze, aerazione, pulizia base)</li>
-  <li>Chiusura stagionale e sicurezza</li>
-  <li>1 pulizia pre-arrivo inclusa</li>
+  <li>1 controllo mensile in tutto l’anno</li>
+  <li>Apertura stagionale (utenze, aerazione, controllo generale)</li>
+  <li>Chiusura stagionale e messa in sicurezza</li>
+  <li>1 pulizia pre-arrivo inclusa per stagione</li>
   <li>Presenza per tecnici o consegne (1 intervento/anno)</li>
-  <li>Report fotografico</li>
+  <li>Report fotografico dopo i principali interventi</li>
 </ul>
-<div class="pack-prices"><strong>Pagamento:</strong> mensile o annuale anticipato</div>
+<div class="pack-prices">
+  <strong>Pagamenti disponibili:</strong> mensile, trimestrale o annuale anticipato con sconto progressivo.
+</div>
+<div class="pack-note">
+  Pensato per chi utilizza la casa soprattutto in estate ma vuole qualcuno che la segua tutto l’anno.
+</div>
 </div>
 </details>
 
@@ -249,23 +304,32 @@ footer{
 <summary>
   <div class="pack-left">
     <span class="pack-name">Pacchetto 3 – Premium Tranquillità</span>
-    <span class="pack-target">Fuori regione o estero</span>
+    <span class="pack-target">Proprietari fuori regione o estero</span>
   </div>
-  <div class="price">75 € / mese<br>820 € / anno</div>
+  <div class="price-block">
+    90 € / mese<br>
+    255 € / trimestre<br>
+    980 € / anno
+  </div>
 </summary>
 <div class="pack-body">
 <h4>Servizi inclusi</h4>
 <ul>
   <li>2 controlli mensili</li>
   <li>Apertura e chiusura stagionale</li>
-  <li>Pulizie pre-arrivo illimitate (uso personale)</li>
-  <li>Ritiro posta</li>
-  <li>Presenza per tecnici e artigiani</li>
-  <li>Preparazione completa della casa</li>
+  <li>Pulizie pre-arrivo illimitate per il tuo uso personale (materiali esclusi)</li>
+  <li>Ritiro posta e piccoli recapiti</li>
+  <li>Presenza coordinata per tecnici e artigiani</li>
+  <li>Preparazione completa della casa prima del tuo arrivo</li>
   <li>Presenza su chiamata fino a 4 ore/anno</li>
-  <li>Report dettagliato con foto</li>
+  <li>Report dettagliato con foto e note</li>
 </ul>
-<div class="pack-prices"><strong>Pagamento:</strong> mensile o annuale anticipato</div>
+<div class="pack-prices">
+  <strong>Pagamenti disponibili:</strong> mensile, trimestrale o annuale anticipato con il massimo risparmio sull’annuale.
+</div>
+<div class="pack-note">
+  La soluzione più completa se vivi lontano e vuoi delegare tutto con serenità.
+</div>
 </div>
 </details>
 
@@ -274,11 +338,11 @@ footer{
 <summary>Servizi extra</summary>
 <div class="extra-body">
 <ul>
-  <li>Pulizie extra: 40–70 €</li>
+  <li>Pulizie extra: 40–70 € (in base a metratura)</li>
   <li>Presenza su chiamata: 15 € / ora</li>
   <li>Intervento urgente: 20–30 €</li>
   <li>Consegna / ritiro chiavi: 10–15 €</li>
-  <li>Preparazione frigo base: 15–25 €</li>
+  <li>Preparazione frigo base: 15–25 € + costo spesa</li>
 </ul>
 </div>
 </details>
@@ -286,19 +350,23 @@ footer{
 <div class="highlight">
 <div class="highlight-title">Perché scegliere questo servizio</div>
 <ul>
-  <li>Presenza reale sul territorio</li>
-  <li>Affidabilità tutto l’anno</li>
-  <li>Comunicazione diretta</li>
-  <li>Cura concreta della casa</li>
+  <li>Presenza reale sul territorio di Manduria e paesi limitrofi</li>
+  <li>Affidabilità e continuità tutto l’anno</li>
+  <li>Comunicazione diretta via WhatsApp, telefono o email</li>
+  <li>Cura concreta della casa, come se fosse abitata più spesso</li>
 </ul>
+</div>
+
+<div class="disclaimer">
+<strong>Cosa non facciamo:</strong> non ci occupiamo di affitti, prenotazioni o gestione degli ospiti e non svolgiamo attività di sorveglianza armata, vigilanza privata o controllo di pubblica sicurezza. Il servizio è esclusivamente di gestione, cura e coordinamento per la tua seconda casa.
 </div>
 
 <div class="contacts">
 <p><strong>Contatti</strong></p>
-<p>Richiedi informazioni senza impegno.</p>
+<p>Raccontami come utilizzi la tua casa e ti propongo il pacchetto più adatto. Richiedi informazioni senza impegno.</p>
 <div class="cta-buttons">
-<a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">WhatsApp</a>
-<a class="btn btn-call" href="tel:+393934425337">Chiama ora</a>
+  <a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">Scrivimi su WhatsApp</a>
+  <a class="btn btn-call" href="tel:+393934425337">Chiama ora</a>
 </div>
 </div>
 
@@ -306,7 +374,7 @@ footer{
 </div>
 
 <footer>
-Servizi di Gestione Seconde Case – Manduria e zone limitrofe
+Servizi di Gestione Seconde Case – Manduria e paesi limitrofi
 </footer>
 
 </body>
