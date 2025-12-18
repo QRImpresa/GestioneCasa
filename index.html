@@ -3,458 +3,398 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Servizi di Gestione Seconde Case</title>
-  <meta name="description" content="Servizi di gestione e controllo seconde case a Manduria e zone limitrofe. Presenza locale affidabile tutto l’anno.">
+
+  <title>Gestione Seconde Case a Manduria</title>
+  <meta name="description" content="Gestione e controllo seconde case a Manduria e zone limitrofe. Presenza locale affidabile tutto l’anno per proprietari non residenti.">
 
   <style>
-    :root {
-      --blue: #004990;
-      --yellow: #f6c400;
-      --green: #1c8c3a;
-      --sand: #f2e3c6;
-      --paper: #fff8e8;
-      --dark: #333333;
+    :root{
+      --blue:#004990;
+      --blue-dark:#01294f;
+      --yellow:#f6c400;
+      --green:#1c8c3a;
+      --sand:#f2e3c6;
+      --paper:#fff8e8;
+      --dark:#333;
+      --radius:6px;
     }
 
-    * {
-      box-sizing: border-box;
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      background:radial-gradient(circle at top,#ffffff 0,var(--sand) 55%,#e1cfaa 100%);
+      color:var(--dark);
+      line-height:1.6;
     }
 
-    body {
-      margin: 0;
-      font-family: "Arial", sans-serif;
-      background: radial-gradient(circle at top, #ffffff 0, var(--sand) 55%, #e1cfaa 100%);
-      color: var(--dark);
-      line-height: 1.6;
+    /* ================= HEADER / HERO ================= */
+
+    header{
+      background:linear-gradient(180deg,var(--blue) 0%,var(--blue-dark) 100%);
+      color:#fff;
+      text-align:center;
+      padding:48px 20px 36px;
     }
 
-    header {
-      text-align: center;
-      padding: 40px 20px 25px;
-      background: linear-gradient(180deg, var(--blue) 0%, #003366 60%, #01294f 100%);
-      color: #ffffff;
-      text-transform: uppercase;
+    header h1{
+      font-size:2.3rem;
+      letter-spacing:1px;
+      text-transform:uppercase;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.2rem;
-      letter-spacing: 1px;
+    header h2{
+      margin-top:6px;
+      font-size:1.4rem;
+      color:var(--yellow);
+      letter-spacing:1px;
+      text-transform:uppercase;
     }
 
-    header h2 {
-      margin: 5px 0 12px;
-      font-size: 1.4rem;
-      color: var(--yellow);
-      letter-spacing: 1px;
+    header p{
+      margin-top:12px;
+      font-size:1.05rem;
+      max-width:720px;
+      margin-left:auto;
+      margin-right:auto;
     }
 
-    header p {
-      margin: 4px 0;
-      font-size: 1rem;
-      text-transform: none;
+    .hero-cta{
+      margin-top:18px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 25px 20px 40px;
+    /* ================= LAYOUT ================= */
+
+    .container{
+      max-width:1050px;
+      margin:0 auto;
+      padding:30px 20px 45px;
     }
 
-    .stripe {
-      background: var(--paper);
-      border-radius: 3px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-      padding: 25px 25px 20px;
-      border-top: 6px solid var(--yellow);
+    .card{
+      background:var(--paper);
+      border-radius:var(--radius);
+      padding:28px 26px 24px;
+      box-shadow:0 4px 10px rgba(0,0,0,.15);
+      border-top:6px solid var(--yellow);
     }
 
-    .section-title {
-      display: inline-block;
-      background: var(--green);
-      color: #ffffff;
-      padding: 6px 14px;
-      font-weight: bold;
-      font-size: 1rem;
-      text-transform: uppercase;
-      margin-bottom: 12px;
+    .section{
+      margin-bottom:26px;
     }
 
-    .intro {
-      margin-bottom: 25px;
+    .section-title{
+      display:inline-block;
+      background:var(--green);
+      color:#fff;
+      padding:6px 14px;
+      font-weight:bold;
+      font-size:.95rem;
+      text-transform:uppercase;
+      border-radius:4px;
+      margin-bottom:12px;
     }
 
-    .intro p {
-      margin: 6px 0;
+    p{margin:6px 0}
+
+    /* ================= LISTE ================= */
+
+    ul{
+      list-style:none;
+      margin:10px 0 14px;
+      padding-left:0;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
-      margin: 8px 0 16px;
+    li{
+      position:relative;
+      padding-left:26px;
+      margin-bottom:6px;
     }
 
-    li {
-      position: relative;
-      padding-left: 26px;
-      margin-bottom: 6px;
+    li::before{
+      content:"✔";
+      position:absolute;
+      left:0;
+      color:var(--green);
+      font-weight:bold;
     }
 
-    li::before {
-      content: "✔";
-      position: absolute;
-      left: 0;
-      top: 0;
-      color: var(--green);
-      font-weight: bold;
+    /* ================= PACCHETTI ================= */
+
+    .packs details{
+      margin-top:12px;
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:0 2px 6px rgba(0,0,0,.1);
+      overflow:hidden;
     }
 
-    /* ACCORDION PACCHETTI */
-
-    .packs-wrapper {
-      margin-top: 10px;
+    .packs summary{
+      list-style:none;
+      cursor:pointer;
+      padding:12px 16px;
+      background:var(--blue);
+      color:#fff;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      font-weight:bold;
+      text-transform:uppercase;
     }
 
-    details.pack {
-      margin-top: 10px;
-      border-radius: 3px;
-      background: #ffffff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-      overflow: hidden;
+    details[open] summary{
+      background:var(--yellow);
+      color:var(--blue-dark);
     }
 
-    details.pack + details.pack {
-      margin-top: 8px;
+    summary::-webkit-details-marker{display:none}
+
+    summary::after{
+      content:"+";
+      font-size:1.2rem;
     }
 
-    details.pack summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 10px 14px;
-      background: var(--blue);
-      color: #ffffff;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: bold;
-      text-transform: uppercase;
+    details[open] summary::after{content:"−"}
+
+    .pack-left{
+      display:flex;
+      flex-direction:column;
     }
 
-    details.pack[open] summary {
-      background: var(--yellow);
-      color: #003366;
+    .pack-name{font-size:.95rem}
+
+    .pack-target{
+      font-size:.8rem;
+      text-transform:none;
+      opacity:.9;
     }
 
-    details.pack summary::-webkit-details-marker {
-      display: none;
+    .price{
+      font-size:.95rem;
+      text-align:right;
+      white-space:nowrap;
     }
 
-    details.pack summary::after {
-      content: "+";
-      margin-left: 10px;
-      font-size: 1.1rem;
+    .pack-body{
+      padding:14px 18px 12px;
+      background:#fffdf6;
+      border-top:1px solid #f0e4c4;
     }
 
-    details.pack[open] summary::after {
-      content: "−";
+    .pack-body h4{
+      font-size:.95rem;
+      margin-bottom:6px;
+      text-transform:uppercase;
+      color:var(--blue);
     }
 
-    .summary-left {
-      display: flex;
-      flex-direction: column;
+    .pack-prices{
+      margin-top:6px;
+      font-size:.9rem;
     }
 
-    .pack-name {
-      font-size: 0.95rem;
+    /* ================= EXTRA ================= */
+
+    .extra{
+      margin-top:28px;
+      border-left:6px solid var(--blue);
+      background:#fff;
+      border-radius:var(--radius);
+      box-shadow:0 2px 6px rgba(0,0,0,.12);
     }
 
-    .pack-target {
-      font-size: 0.8rem;
-      text-transform: none;
-      opacity: 0.9;
+    .extra summary{
+      padding:12px 16px;
+      cursor:pointer;
+      font-weight:bold;
+      text-transform:uppercase;
+      color:var(--blue);
+      display:flex;
+      justify-content:space-between;
     }
 
-    .price {
-      font-size: 0.95rem;
-      text-align: right;
+    .extra summary::after{content:"+"}
+    .extra[open] summary::after{content:"−"}
+
+    .extra-body{
+      padding:12px 18px;
+      background:#fffdf6;
+      border-top:1px solid #f0e4c4;
     }
 
-    .pack-body {
-      padding: 12px 16px 10px;
-      background: #fffdf6;
-      border-top: 1px solid #f0e4c4;
+    .extra-body li::before{content:"•"}
+
+    /* ================= HIGHLIGHT ================= */
+
+    .highlight{
+      margin-top:28px;
+      background:#fff6d6;
+      border-left:6px solid var(--yellow);
+      border-radius:var(--radius);
+      padding:18px 20px 12px;
     }
 
-    .pack-body h4 {
-      margin: 0 0 6px;
-      font-size: 0.95rem;
-      text-transform: uppercase;
-      color: var(--blue);
+    .highlight-title{
+      font-weight:bold;
+      text-transform:uppercase;
+      color:var(--blue);
+      margin-bottom:10px;
     }
 
-    .pack-prices {
-      margin-top: 6px;
-      font-size: 0.9rem;
+    /* ================= CTA / CONTATTI ================= */
+
+    .contacts{
+      margin-top:26px;
+      background:#fff;
+      border-left:6px solid var(--blue);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:0 2px 6px rgba(0,0,0,.12);
     }
 
-    .pack-note {
-      margin-top: 4px;
-      font-size: 0.85rem;
-      font-style: italic;
+    .cta-buttons{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:10px;
     }
 
-    /* SERVIZI EXTRA A TENDINA */
-
-    details.extra {
-      margin-top: 25px;
-      border-radius: 3px;
-      background: #ffffff;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-      border-left: 6px solid var(--blue);
-      overflow: hidden;
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:4px;
+      font-weight:bold;
+      text-decoration:none;
+      color:#fff;
+      font-size:.95rem;
     }
 
-    details.extra summary {
-      list-style: none;
-      cursor: pointer;
-      padding: 10px 14px;
-      background: #ffffff;
-      color: var(--blue);
-      font-weight: bold;
-      text-transform: uppercase;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+    .btn-whatsapp{background:#25d366}
+    .btn-call{background:var(--blue)}
+
+    .btn:hover{opacity:.9}
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:var(--blue-dark);
+      color:#fff;
+      text-align:center;
+      padding:18px 14px;
+      font-size:.9rem;
     }
 
-    details.extra summary::-webkit-details-marker {
-      display: none;
-    }
-
-    details.extra summary::after {
-      content: "+";
-      margin-left: 10px;
-      font-size: 1.1rem;
-      color: var(--blue);
-    }
-
-    details.extra[open] summary::after {
-      content: "−";
-    }
-
-    .extras-body {
-      padding: 10px 16px 8px;
-      background: #fffdf6;
-      border-top: 1px solid #f0e4c4;
-    }
-
-    .extras-body ul li::before {
-      content: "•";
-      color: var(--green);
-      font-weight: bold;
-    }
-
-    /* PERCHÉ SCEGLIERCI */
-
-    .highlight {
-      margin-top: 25px;
-      padding: 18px 20px 10px;
-      background: #fff6d6;
-      border-left: 6px solid var(--yellow);
-      border-radius: 3px;
-    }
-
-    .highlight-title {
-      font-weight: bold;
-      text-transform: uppercase;
-      color: var(--blue);
-      margin-bottom: 10px;
-    }
-
-    /* CONTATTI + CTA */
-
-    .contacts {
-      margin-top: 20px;
-      padding: 18px 20px 16px;
-      background: #ffffff;
-      border-radius: 3px;
-      border-left: 6px solid var(--blue);
-      box-shadow: 0 2px 6px rgba(0,0,0,0.12);
-    }
-
-    .contacts p {
-      margin: 4px 0 10px;
-    }
-
-    .contacts strong {
-      color: var(--blue);
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 6px;
-    }
-
-    .btn-cta {
-      display: inline-block;
-      padding: 8px 14px;
-      border-radius: 4px;
-      font-size: 0.95rem;
-      font-weight: bold;
-      text-decoration: none;
-      color: #ffffff;
-      cursor: pointer;
-      border: none;
-    }
-
-    .btn-whatsapp {
-      background: #25d366;
-    }
-
-    .btn-call {
-      background: var(--blue);
-    }
-
-    .btn-cta:hover {
-      opacity: 0.9;
-    }
-
-    footer {
-      background: #01294f;
-      color: #ffffff;
-      text-align: center;
-      padding: 18px 15px;
-      font-size: 0.9rem;
+    @media(max-width:600px){
+      header h1{font-size:2rem}
+      header h2{font-size:1.2rem}
     }
   </style>
 </head>
+
 <body>
 
 <header>
-  <h1>Servizi di Gestione</h1>
-  <h2>Seconde Case </h2>
-  <p>Hai una casa a Manduria o zone limitrofe ma vivi lontano?</p>
-  <p>Presenza affidabile sul territorio per la tua tranquillità tutto l’anno.</p>
+  <h1>Gestione Seconde Case</h1>
+  <h2>Manduria e zone limitrofe</h2>
+  <p>Presenza locale affidabile per chi vive lontano dalla propria casa.<br>Controllo, cura e tranquillità tutto l’anno.</p>
+
+  <div class="hero-cta">
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/393934425337?text=Ciao%2C%20vorrei%20informazioni%20sui%20servizi%20di%20gestione%20seconde%20case."
+       target="_blank" rel="noopener">Scrivi su WhatsApp</a>
+    <a class="btn btn-call" href="tel:+393934425337">Chiama ora</a>
+  </div>
 </header>
 
 <div class="container">
-  <div class="stripe">
-    <div class="intro">
+  <div class="card">
+
+    <section class="section">
       <span class="section-title">Il servizio</span>
-      <p>
-        Il servizio di gestione seconde case è pensato per i proprietari che non risiedono stabilmente a Manduria o zone limitrofe e desiderano una presenza di fiducia sul territorio.
-      </p>
-      <p>
-        Ci occupiamo del controllo, della cura e della preparazione dell’abitazione affinché sia sempre seguita e pronta quando ne hai bisogno.
-      </p>
-    </div>
+      <p>Servizio pensato per proprietari non residenti che desiderano una presenza di fiducia sul territorio.</p>
+      <p>La casa viene controllata, curata e preparata affinché sia sempre seguita e pronta all’uso.</p>
+    </section>
 
     <span class="section-title">Pacchetti disponibili</span>
 
-    <div class="packs-wrapper">
+    <div class="packs">
 
-      <!-- PACCHETTO 1 -->
-      <details class="pack">
+      <!-- BASE -->
+      <details>
         <summary>
-          <div class="summary-left">
-            <span class="pack-name">Pacchetto 1 – Controllo Base</span>
-            <span class="pack-target">Target: case chiuse per lunghi periodi, uso saltuario</span>
+          <div class="pack-left">
+            <span class="pack-name">Pacchetto Base – Controllo</span>
+            <span class="pack-target">Case chiuse per lunghi periodi</span>
           </div>
-          <div class="price">
-            <div>25 € / mese</div>
-            <div>270 € / anno</div>
-          </div>
+          <div class="price">25 €/mese<br>270 €/anno</div>
         </summary>
         <div class="pack-body">
           <h4>Servizi inclusi</h4>
           <ul>
             <li>1 controllo mensile</li>
             <li>Ariazione locali</li>
-            <li>Controllo visivo infiltrazioni e umidità</li>
-            <li>Controllo finestre, porte, serrature</li>
+            <li>Verifica infiltrazioni e sicurezza</li>
             <li>Report WhatsApp con foto</li>
-            <li>Avviso immediato in caso di problemi</li>
           </ul>
-          <div class="pack-prices">
-            <strong>Prezzo:</strong> 25 € / mese oppure 270 € / anno (pagamento anticipato).
-          </div>
         </div>
       </details>
 
-      <!-- PACCHETTO 2 -->
-      <details class="pack">
+      <!-- STAGIONALE -->
+      <details>
         <summary>
-          <div class="summary-left">
-            <span class="pack-name">Pacchetto 2 – Stagionale Salento</span>
-            <span class="pack-target">Target: proprietari che usano la casa in estate e saltuariamente in inverno</span>
+          <div class="pack-left">
+            <span class="pack-name">Pacchetto Stagionale</span>
+            <span class="pack-target">Uso estivo e saltuario</span>
           </div>
-          <div class="price">
-            <div>45 € / mese</div>
-            <div>480 € / anno</div>
-          </div>
+          <div class="price">45 €/mese<br>480 €/anno</div>
         </summary>
         <div class="pack-body">
           <h4>Servizi inclusi</h4>
           <ul>
-            <li>1 controllo mensile</li>
-            <li>Apertura stagionale: aerazione completa, attivazione utenze, pulizia base</li>
-            <li>Chiusura stagionale: spegnimento utenze e controllo sicurezza</li>
-            <li>1 pulizia pre-arrivo inclusa</li>
-            <li>Presenza per tecnici o consegne (1 intervento/anno)</li>
-            <li>Report fotografico dopo ogni intervento</li>
+            <li>Controllo mensile</li>
+            <li>Apertura e chiusura stagionale</li>
+            <li>Pulizia pre-arrivo</li>
+            <li>Presenza per tecnici</li>
           </ul>
-          <div class="pack-prices">
-            <strong>Prezzo:</strong> 45 € / mese oppure 480 € / anno. (pagamento anticipato)
-          </div>
         </div>
       </details>
 
-      <!-- PACCHETTO 3 -->
-      <details class="pack">
+      <!-- PREMIUM -->
+      <details>
         <summary>
-          <div class="summary-left">
-            <span class="pack-name">Pacchetto 3 – Premium Tranquillità</span>
-            <span class="pack-target">Target: proprietari fuori regione o estero</span>
+          <div class="pack-left">
+            <span class="pack-name">Pacchetto Premium</span>
+            <span class="pack-target">Fuori regione o estero</span>
           </div>
-          <div class="price">
-            <div>75 € / mese</div>
-            <div>820 € / anno</div>
-          </div>
+          <div class="price">75 €/mese<br>820 €/anno</div>
         </summary>
         <div class="pack-body">
           <h4>Servizi inclusi</h4>
           <ul>
             <li>2 controlli mensili</li>
-            <li>Apertura e chiusura stagionale</li>
-            <li>Pulizie pre-arrivo illimitate (uso personale)</li>
+            <li>Pulizie pre-arrivo illimitate</li>
             <li>Ritiro posta</li>
-            <li>Presenza per artigiani e tecnici</li>
-            <li>Preparazione casa (letti pronti, controllo cucina)</li>
-            <li>Presenza su chiamata fino a 4 ore/anno</li>
-            <li>Report dettagliato con foto</li>
+            <li>Presenza su chiamata</li>
+            <li>Report dettagliato</li>
           </ul>
-          <div class="pack-prices">
-            <strong>Prezzo:</strong> 75 € / mese oppure 820 € / anno. (pagamento anticipato)
-          </div>
         </div>
       </details>
 
     </div>
 
-    <!-- SERVIZI EXTRA A TENDINA -->
     <details class="extra">
-      <summary>
-        <span>Servizi extra</span>
-      </summary>
-      <div class="extras-body">
+      <summary>Servizi extra</summary>
+      <div class="extra-body">
         <ul>
-          <li>Pulizia extra: 40–70 €</li>
-          <li>Presenza su chiamata: 15 € / ora</li>
-          <li>Intervento urgente: 20–30 €</li>
-          <li>Consegna / ritiro chiavi: 10–15 €</li>
-          <li>Preparazione frigo base: 15–25 €</li>
+          <li>Pulizie extra</li>
+          <li>Presenza su chiamata</li>
+          <li>Interventi urgenti</li>
+          <li>Consegna chiavi</li>
         </ul>
       </div>
     </details>
@@ -462,34 +402,29 @@
     <div class="highlight">
       <div class="highlight-title">Perché scegliere questo servizio</div>
       <ul>
-        <li>Servizio locale e presenza reale</li>
-        <li>Affidabilità e continuità durante tutto l’anno</li>
-        <li>Comunicazione diretta e chiara</li>
-        <li>Cura concreta della tua casa</li>
+        <li>Presenza reale sul territorio</li>
+        <li>Continuità e affidabilità</li>
+        <li>Comunicazione diretta</li>
+        <li>Cura concreta della casa</li>
       </ul>
     </div>
 
     <div class="contacts">
       <p><strong>Contatti</strong></p>
-      <p>Per informazioni sui pacchetti e sulle modalità operative, contattaci senza impegno.</p>
+      <p>Richiedi informazioni senza impegno.</p>
       <div class="cta-buttons">
-        <!-- Italia: prefisso 39 + numero 3934425337 senza segni -->
-        <a class="btn-cta btn-whatsapp"
+        <a class="btn btn-whatsapp"
            href="https://wa.me/393934425337?text=Ciao%2C%20vorrei%20informazioni%20sui%20servizi%20di%20gestione%20seconde%20case."
-           target="_blank" rel="noopener">
-          Scrivi su WhatsApp
-        </a>
-        <a class="btn-cta btn-call"
-           href="tel:+393934425337">
-          Chiama ora
-        </a>
+           target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn btn-call" href="tel:+393934425337">Chiama ora</a>
       </div>
     </div>
+
   </div>
 </div>
 
 <footer>
-  <p>Servizi di Gestione Seconde Case – Manduria e zone limitrofe</p>
+  Servizi di Gestione Seconde Case – Manduria e zone limitrofe
 </footer>
 
 </body>
