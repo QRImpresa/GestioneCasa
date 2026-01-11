@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>HomeCheck – Controllo Periodico Abitazioni | Manduria</title>
-<meta name="description" content="HomeCheck: controllo periodico, cura e presidio operativo di seconde case a Manduria e comuni limitrofi. Fase pilota a numero chiuso.">
+<title>HomeCheck – Controllo Seconde Case | Manduria</title>
+<meta name="description" content="HomeCheck: controllo, presidio e cura periodica di seconde case a Manduria e comuni limitrofi. Fase pilota a numero chiuso con condizioni agevolate.">
 
 <style>
 :root{
@@ -25,48 +25,30 @@ body{
   color:var(--dark);
   line-height:1.6;
 }
-
-/* HERO */
 header{
   background:linear-gradient(180deg,var(--blue),var(--blue-dark));
   color:#fff;
   text-align:center;
-  padding:56px 20px 44px;
+  padding:50px 20px 40px;
 }
-header img{max-width:140px;margin-bottom:14px}
-header h1{text-transform:uppercase;font-size:2.2rem}
+header img{
+  max-width:180px;
+  margin-bottom:15px;
+}
+header h1{text-transform:uppercase;font-size:2.1rem}
 header h2{color:var(--yellow);margin-top:6px;text-transform:uppercase;font-size:1.1rem}
-header p{max-width:780px;margin:14px auto 0}
-.hero-note{margin-top:10px;font-size:.9rem;opacity:.9}
+header p{max-width:780px;margin:12px auto 0}
+.hero-note{font-size:.9rem;opacity:.9;margin-top:8px}
 
-/* CTA */
-.hero-cta{
-  margin-top:20px;
-  display:flex;
-  justify-content:center;
-  gap:12px;
-  flex-wrap:wrap;
-}
-.btn{
-  padding:10px 18px;
-  border-radius:4px;
-  font-weight:bold;
-  text-decoration:none;
-  color:#fff;
-}
-.btn-whatsapp{background:#25d366}
-.btn-call{background:var(--blue)}
-
-/* LAYOUT */
-.container{max-width:1050px;margin:auto;padding:34px 20px 50px}
+.container{max-width:1050px;margin:auto;padding:30px 20px 50px}
 .card{
   background:var(--paper);
   border-radius:var(--radius);
-  padding:30px 26px;
+  padding:28px;
   box-shadow:0 4px 10px rgba(0,0,0,.15);
   border-top:6px solid var(--yellow);
 }
-.section{margin-bottom:30px}
+.section{margin-bottom:28px}
 .section-title{
   display:inline-block;
   background:var(--green);
@@ -77,13 +59,10 @@ header p{max-width:780px;margin:14px auto 0}
   border-radius:4px;
   margin-bottom:12px;
 }
-
-/* LISTE */
 ul{list-style:none;margin:10px 0}
-li{padding-left:26px;position:relative;margin-bottom:6px}
+li{padding-left:24px;position:relative;margin-bottom:6px}
 li::before{content:"✔";position:absolute;left:0;color:var(--green)}
 
-/* DETAILS */
 details{
   margin-top:14px;
   background:#fff;
@@ -94,51 +73,47 @@ details{
 summary{
   list-style:none;
   cursor:pointer;
-  padding:14px 18px;
+  padding:14px 16px;
   background:var(--blue);
   color:#fff;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
   font-weight:bold;
   text-transform:uppercase;
+  display:flex;
+  justify-content:space-between;
 }
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+"}
 details[open] summary::after{content:"−"}
-details[open] summary{background:var(--yellow);color:var(--blue-dark)}
 
-.pack-left{display:flex;flex-direction:column}
-.pack-name{font-size:.95rem}
-.pack-target{font-size:.8rem;text-transform:none;opacity:.9}
-.price-block{text-align:right;font-size:.9rem;white-space:nowrap}
-
-/* BODY */
-.pack-body{padding:16px 20px;background:#fffdf6;border-top:1px solid #f0e4c4}
-.pack-note{margin-top:6px;font-size:.85rem;font-style:italic}
-
-/* EXTRA */
-.extra{margin-top:22px;border-left:6px solid var(--blue)}
-.extra summary{background:#fff;color:var(--blue)}
-.extra-body{padding:14px 20px;background:#fffdf6}
-.extra-body li::before{content:"•";color:var(--blue);font-size:1.2rem}
-
-/* REGOLAMENTO */
-.regolamento{
-  margin-top:30px;
-  background:#fff6d6;
-  border-left:6px solid var(--yellow);
-  padding:20px;
+.pack-body{
+  padding:16px 18px;
+  background:#fffdf6;
+}
+.price-compare{
+  margin-top:10px;
   font-size:.9rem;
 }
+.price-compare strong{color:var(--blue-dark)}
 
-/* FOOTER */
+.highlight{
+  background:#fff6d6;
+  border-left:6px solid var(--yellow);
+  padding:18px;
+  margin-top:30px;
+}
+.disclaimer{
+  background:#fbe9e5;
+  border-left:6px solid #d8492f;
+  padding:14px;
+  font-size:.9rem;
+  margin-top:22px;
+}
 footer{
   background:var(--blue-dark);
   color:#fff;
   text-align:center;
   padding:18px;
-  font-size:.85rem;
+  font-size:.9rem;
 }
 </style>
 </head>
@@ -148,172 +123,122 @@ footer{
 <header>
   <img src="assets/img/logo-homecheck.png" alt="HomeCheck">
   <h1>HomeCheck</h1>
-  <h2>Controllo periodico e cura dell’abitazione</h2>
-  <p>Servizio locale per proprietari non residenti a Manduria e comuni limitrofi.</p>
-  <p class="hero-note">
-    Fase pilota a numero chiuso • durata minima 3 mesi • nessuna vigilanza • nessuna gestione affitti
-  </p>
-  <div class="hero-cta">
-    <a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">WhatsApp</a>
-    <a class="btn btn-call" href="tel:+393934425337">Chiama</a>
-  </div>
+  <h2>Controllo e verifica periodica</h2>
+  <p>Presenza locale affidabile per seconde case a Manduria e comuni limitrofi</p>
+  <p class="hero-note">Fase pilota a numero chiuso – accesso riservato</p>
 </header>
 
 <div class="container">
 <div class="card">
 
-<!-- DESCRIZIONE SERVIZIO -->
 <section class="section">
-<span class="section-title">Il servizio</span>
+<span class="section-title">Perché è utile</span>
 <p>
-HomeCheck nasce per chi possiede una seconda casa ma non può essere presente con continuità.
-Una casa chiusa, anche se inutilizzata, richiede controlli periodici per evitare danni,
-deterioramenti e situazioni spiacevoli.
+Una casa chiusa per lunghi periodi tende a deteriorarsi anche senza eventi evidenti.
+HomeCheck serve a prevenire problemi, segnalare anomalie e mantenere l’immobile in condizioni corrette nel tempo.
 </p>
-<p>
-Il servizio fornisce una <strong>presenza operativa locale</strong>, con controlli programmati,
-segnalazioni puntuali e attività concrete di cura e riordino.
-</p>
-
-<details>
-<summary>Perché è utile</summary>
-<div class="pack-body">
 <ul>
-<li>Riduce il rischio di danni da umidità o infiltrazioni</li>
-<li>Previene accessi non autorizzati o situazioni anomale</li>
-<li>Mantiene l’abitazione in condizioni dignitose</li>
-<li>Sostituisce la presenza fisica del proprietario</li>
+  <li>Riduce rischi di danni non rilevati</li>
+  <li>Evita sorprese al tuo ritorno</li>
+  <li>Sostituisce la presenza fisica del proprietario</li>
 </ul>
-</div>
-</details>
 </section>
 
-<!-- PACCHETTI -->
-<span class="section-title">Pacchetti – Fase Pilota (3 mesi)</span>
+<span class="section-title">Pacchetti – Fase Pilota (minimo 3 mesi)</span>
 
 <details>
-<summary>
-  <div class="pack-left">
-    <span class="pack-name">BASE – Piccole abitazioni</span>
-    <span class="pack-target">Appartamenti · case di paese</span>
-  </div>
-  <div class="price-block"><strong>70 €</strong></div>
-</summary>
+<summary>BASE – Piccole abitazioni</summary>
 <div class="pack-body">
 <ul>
-<li>1 controllo mensile</li>
-<li>Aerazione locali</li>
-<li>Controllo visivo umidità e infiltrazioni</li>
-<li>Verifica porte, finestre e serrature</li>
-<li>Pulizia veloce e sistemazione ambienti</li>
-<li>Report WhatsApp con foto</li>
+  <li>1 controllo mensile</li>
+  <li>Aerazione locali</li>
+  <li>Controllo visivo umidità e infiltrazioni</li>
+  <li>Verifica porte e finestre</li>
+  <li>Report fotografico WhatsApp</li>
+  <li>Pulizia veloce e sistemazione cose fuori posto</li>
 </ul>
-<div class="pack-note">Durata minima: 3 mesi – pagamento anticipato.</div>
+<div class="price-compare">
+<strong>Fase pilota:</strong> 70 € / mese (3 mesi)<br>
+<strong>Prezzo standard:</strong> 90 € / mese
+</div>
 </div>
 </details>
 
 <details>
-<summary>
-  <div class="pack-left">
-    <span class="pack-name">PLUS – Villette</span>
-    <span class="pack-target">Uso stagionale</span>
-  </div>
-  <div class="price-block"><strong>125 €</strong></div>
-</summary>
+<summary>PLUS – Piccole villette</summary>
 <div class="pack-body">
 <ul>
-<li>1 controllo mensile</li>
-<li>Controllo interno ed esterno</li>
-<li>Pulizia veloce e riordino</li>
-<li>Apertura e chiusura stagionale</li>
-<li>1 pulizia pre-arrivo inclusa</li>
-<li>Presenza per tecnici (1 volta)</li>
+  <li>1 controllo mensile</li>
+  <li>Apertura e chiusura stagionale</li>
+  <li>Pulizia pre-arrivo (1 inclusa)</li>
+  <li>Presenza per tecnici (1/anno)</li>
+  <li>Report dettagliato</li>
+  <li>Pulizia veloce e riordino</li>
 </ul>
-<div class="pack-note">Durata minima: 3 mesi – pagamento anticipato.</div>
+<div class="price-compare">
+<strong>Fase pilota:</strong> 125 € / mese (3 mesi)<br>
+<strong>Prezzo standard:</strong> 155 € / mese
+</div>
 </div>
 </details>
 
 <details>
-<summary>
-  <div class="pack-left">
-    <span class="pack-name">PREMIUM – Ville / piscina</span>
-    <span class="pack-target">Proprietari lontani</span>
-  </div>
-  <div class="price-block"><strong>210 €</strong></div>
-</summary>
+<summary>PREMIUM – Ville / ville con piscina</summary>
 <div class="pack-body">
 <ul>
-<li>2 controlli mensili</li>
-<li>Controllo completo interni ed esterni</li>
-<li>Controllo visivo area piscina</li>
-<li>Pulizia veloce e sistemazione dettagliata</li>
-<li>Pulizie pre-arrivo illimitate (uso personale)</li>
-<li>Presenza su chiamata fino a 4 ore</li>
+  <li>2 controlli mensili</li>
+  <li>Gestione stagionale completa</li>
+  <li>Pulizie pre-arrivo illimitate per uso personale</li>
+  <li>Presenza coordinata per tecnici</li>
+  <li>Preparazione completa casa</li>
+  <li>Controllo area esterna e piscina (visivo)</li>
 </ul>
-<div class="pack-note">Durata minima: 3 mesi – pagamento anticipato.</div>
+<div class="price-compare">
+<strong>Fase pilota:</strong> 210 € / mese (3 mesi)<br>
+<strong>Prezzo standard:</strong> 260 € / mese
+</div>
 </div>
 </details>
 
-<!-- EXTRA -->
-<details class="extra">
-<summary>Servizi extra</summary>
-<div class="extra-body">
+<section class="section">
+<span class="section-title">Servizi extra</span>
 <ul>
-<li>Pulizia extra: 25–70 €</li>
-<li>Presenza su chiamata: 15 € / ora</li>
-<li>Accesso straordinario: 15–20 €</li>
-<li>Intervento urgente: 25–35 €</li>
-<li>Consegna / ritiro chiavi: 10–15 €</li>
+  <li>Pulizie extra: 40–70 €</li>
+  <li>Presenza su chiamata: 15 € / ora</li>
+  <li>Intervento urgente: 20–30 €</li>
+  <li>Consegna / ritiro chiavi: 10–15 €</li>
 </ul>
-</div>
-</details>
+</section>
 
-<!-- REGOLAMENTO -->
-<div class="regolamento">
-<strong>Regolamento sintetico – Fase Pilota</strong>
+<section class="section">
+<span class="section-title">Regolamento sintetico</span>
 <ul>
-<li>Durata minima obbligatoria: 3 mesi</li>
-<li>Pagamento anticipato per l’intero periodo</li>
-<li>Il servizio non è sorveglianza né vigilanza armata</li>
-<li>Nessuna gestione affitti o ospiti</li>
-<li>Accessi solo per attività autorizzate</li>
-<li>Ogni accesso è tracciato e comunicato</li>
-<li>Rinnovo non automatico al termine della fase pilota</li>
+  <li>Servizio di controllo e segnalazione, non sorveglianza continua</li>
+  <li>Nessuna manutenzione tecnica inclusa</li>
+  <li>Accessi solo autorizzati</li>
+  <li>Contratto minimo 3 mesi</li>
+  <li>Nessun rinnovo automatico</li>
 </ul>
-</div>
+</section>
 
-<!-- FAQ -->
 <section class="section">
 <span class="section-title">FAQ</span>
-
-<details>
-<summary>È un servizio di sicurezza?</summary>
-<div class="pack-body">
-No. HomeCheck non è vigilanza privata né sorveglianza armata. È un servizio di controllo periodico e cura dell’abitazione.
-</div>
-</details>
-
-<details>
-<summary>Cosa succede se trovate un problema?</summary>
-<div class="pack-body">
-Il problema viene documentato e segnalato immediatamente al proprietario con foto e descrizione.
-</div>
-</details>
-
-<details>
-<summary>Posso interrompere dopo i 3 mesi?</summary>
-<div class="pack-body">
-Sì. Al termine del periodo minimo il servizio può essere interrotto senza penali.
-</div>
-</details>
-
+<ul>
+  <li><strong>È una vigilanza?</strong> No, è un controllo periodico.</li>
+  <li><strong>Fate riparazioni?</strong> No, solo segnalazione e coordinamento.</li>
+  <li><strong>Posso interrompere?</strong> Sì, dopo i 3 mesi minimi.</li>
+</ul>
 </section>
+
+<div class="disclaimer">
+Il servizio non include vigilanza armata, sicurezza privata o gestione affitti.
+</div>
 
 </div>
 </div>
 
 <footer>
-HomeCheck · Controllo periodico abitazioni · Manduria e comuni limitrofi
+HomeCheck – Manduria e comuni limitrofi
 </footer>
 
 </body>
