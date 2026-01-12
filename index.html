@@ -25,6 +25,8 @@ body{
   color:var(--dark);
   line-height:1.6;
 }
+
+/* HERO */
 header{
   background:linear-gradient(180deg,var(--blue),var(--blue-dark));
   color:#fff;
@@ -33,13 +35,14 @@ header{
 }
 header img{
   max-width:180px;
-  margin-bottom:15px;
+  margin-bottom:14px;
 }
 header h1{text-transform:uppercase;font-size:2.1rem}
 header h2{color:var(--yellow);margin-top:6px;text-transform:uppercase;font-size:1.1rem}
 header p{max-width:780px;margin:12px auto 0}
 .hero-note{font-size:.9rem;opacity:.9;margin-top:8px}
 
+/* LAYOUT */
 .container{max-width:1050px;margin:auto;padding:30px 20px 50px}
 .card{
   background:var(--paper);
@@ -59,10 +62,13 @@ header p{max-width:780px;margin:12px auto 0}
   border-radius:4px;
   margin-bottom:12px;
 }
+
+/* LISTE */
 ul{list-style:none;margin:10px 0}
 li{padding-left:24px;position:relative;margin-bottom:6px}
 li::before{content:"✔";position:absolute;left:0;color:var(--green)}
 
+/* PACCHETTI */
 details{
   margin-top:14px;
   background:#fff;
@@ -95,12 +101,15 @@ details[open] summary::after{content:"−"}
 }
 .price-compare strong{color:var(--blue-dark)}
 
+/* HIGHLIGHT */
 .highlight{
   background:#fff6d6;
   border-left:6px solid var(--yellow);
   padding:18px;
   margin-top:30px;
 }
+
+/* DISCLAIMER */
 .disclaimer{
   background:#fbe9e5;
   border-left:6px solid #d8492f;
@@ -108,6 +117,40 @@ details[open] summary::after{content:"−"}
   font-size:.9rem;
   margin-top:22px;
 }
+
+/* CONTATTI */
+.contact-section{
+  margin-top:40px;
+  background:#fff;
+  border-left:6px solid var(--blue);
+  padding:24px;
+  text-align:center;
+}
+.contact-section h3{
+  color:var(--blue);
+  margin-bottom:10px;
+  text-transform:uppercase;
+}
+.contact-section p{
+  margin-bottom:16px;
+}
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.btn{
+  padding:12px 18px;
+  border-radius:4px;
+  font-weight:bold;
+  text-decoration:none;
+  color:#fff;
+}
+.btn-whatsapp{background:#25d366}
+.btn-call{background:var(--blue)}
+
+/* FOOTER */
 footer{
   background:var(--blue-dark);
   color:#fff;
@@ -138,64 +181,62 @@ Una casa chiusa per lunghi periodi tende a deteriorarsi anche senza eventi evide
 HomeCheck serve a prevenire problemi, segnalare anomalie e mantenere l’immobile in condizioni corrette nel tempo.
 </p>
 <ul>
-  <li>Riduce rischi di danni non rilevati</li>
-  <li>Evita sorprese al tuo ritorno</li>
-  <li>Sostituisce la presenza fisica del proprietario</li>
+  <li>Riduzione dei rischi di danni non rilevati</li>
+  <li>Nessuna sorpresa al tuo ritorno</li>
+  <li>Controllo documentato senza presenza fisica</li>
 </ul>
 </section>
 
-<span class="section-title">Pacchetti – Fase Pilota (minimo 3 mesi)</span>
+<span class="section-title">Pacchetti – Fase pilota (minimo 3 mesi)</span>
 
 <details>
-<summary>BASE – Piccole abitazioni</summary>
+<summary>Base – Piccole abitazioni</summary>
 <div class="pack-body">
 <ul>
   <li>1 controllo mensile</li>
   <li>Aerazione locali</li>
-  <li>Controllo visivo umidità e infiltrazioni</li>
+  <li>Controllo umidità e infiltrazioni</li>
   <li>Verifica porte e finestre</li>
   <li>Report fotografico WhatsApp</li>
-  <li>Pulizia veloce e sistemazione cose fuori posto</li>
+  <li>Pulizia veloce e sistemazione</li>
 </ul>
 <div class="price-compare">
-<strong>Fase pilota:</strong> 70 € / mese (3 mesi)<br>
-<strong>Prezzo standard:</strong> 90 € / mese
+<strong>Fase pilota:</strong> 70 € / mese<br>
+<strong>Dopo la prova:</strong> 90 € / mese
 </div>
 </div>
 </details>
 
 <details>
-<summary>PLUS – Piccole villette</summary>
+<summary>Plus – Piccole villette</summary>
 <div class="pack-body">
 <ul>
-  <li>1 controllo mensile</li>
+  <li>Controllo mensile</li>
   <li>Apertura e chiusura stagionale</li>
-  <li>Pulizia pre-arrivo (1 inclusa)</li>
+  <li>1 pulizia pre-arrivo inclusa</li>
   <li>Presenza per tecnici (1/anno)</li>
-  <li>Report dettagliato</li>
-  <li>Pulizia veloce e riordino</li>
+  <li>Riordino e verifica generale</li>
 </ul>
 <div class="price-compare">
-<strong>Fase pilota:</strong> 125 € / mese (3 mesi)<br>
-<strong>Prezzo standard:</strong> 155 € / mese
+<strong>Fase pilota:</strong> 125 € / mese<br>
+<strong>Dopo la prova:</strong> 155 € / mese
 </div>
 </div>
 </details>
 
 <details>
-<summary>PREMIUM – Ville / ville con piscina</summary>
+<summary>Premium – Ville / piscine</summary>
 <div class="pack-body">
 <ul>
   <li>2 controlli mensili</li>
   <li>Gestione stagionale completa</li>
-  <li>Pulizie pre-arrivo illimitate per uso personale</li>
-  <li>Presenza coordinata per tecnici</li>
+  <li>Pulizie pre-arrivo illimitate (uso personale)</li>
   <li>Preparazione completa casa</li>
-  <li>Controllo area esterna e piscina (visivo)</li>
+  <li>Controllo visivo esterni e piscina</li>
 </ul>
 <div class="price-compare">
-<strong>Fase pilota:</strong> 210 € / mese (3 mesi)<br>
-<strong>Prezzo standard:</strong> 260 € / mese
+<strong>Fase pilota:</strong> 210 € / mese<br>
+<strong>Dopo la prova:</strong> 260 € / mese
 </div>
 </div>
 </details>
@@ -213,10 +254,9 @@ HomeCheck serve a prevenire problemi, segnalare anomalie e mantenere l’immobil
 <section class="section">
 <span class="section-title">Regolamento sintetico</span>
 <ul>
-  <li>Servizio di controllo e segnalazione, non sorveglianza continua</li>
-  <li>Nessuna manutenzione tecnica inclusa</li>
-  <li>Accessi solo autorizzati</li>
+  <li>Servizio di controllo e segnalazione, non sorveglianza</li>
   <li>Contratto minimo 3 mesi</li>
+  <li>Accessi solo autorizzati</li>
   <li>Nessun rinnovo automatico</li>
 </ul>
 </section>
@@ -224,14 +264,24 @@ HomeCheck serve a prevenire problemi, segnalare anomalie e mantenere l’immobil
 <section class="section">
 <span class="section-title">FAQ</span>
 <ul>
-  <li><strong>È una vigilanza?</strong> No, è un controllo periodico.</li>
-  <li><strong>Fate riparazioni?</strong> No, solo segnalazione e coordinamento.</li>
-  <li><strong>Posso interrompere?</strong> Sì, dopo i 3 mesi minimi.</li>
+  <li><strong>È vigilanza?</strong> No, controllo periodico.</li>
+  <li><strong>Fate riparazioni?</strong> No, solo segnalazione.</li>
+  <li><strong>Posso interrompere?</strong> Dopo i 3 mesi minimi.</li>
 </ul>
 </section>
 
 <div class="disclaimer">
 Il servizio non include vigilanza armata, sicurezza privata o gestione affitti.
+</div>
+
+<!-- CONTATTI FINALI -->
+<div class="contact-section">
+<h3>Per maggiori informazioni</h3>
+<p>Scrivici o chiamaci senza impegno per verificare disponibilità e pacchetto adatto.</p>
+<div class="cta-buttons">
+  <a class="btn btn-whatsapp" href="https://wa.me/393934425337" target="_blank">Scrivici su WhatsApp</a>
+  <a class="btn btn-call" href="tel:+393934425337">Chiama</a>
+</div>
 </div>
 
 </div>
